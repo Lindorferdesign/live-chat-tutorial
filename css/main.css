@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  background: #ebebeb;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.livechat {
+  background: white;
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  width: 75%;
+  max-width: 300px;
+  border-radius: 1em;
+  -webkit-box-shadow: 14px 14px 38px rgba(0, 0, 0, 0.08);
+          box-shadow: 14px 14px 38px rgba(0, 0, 0, 0.08);
+  -webkit-clip-path: circle(0% at 100% 100%);
+          clip-path: circle(0% at 100% 100%);
+}
+
+.livechat .header {
+  background: #9446F7;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border-radius: 1em 1em 0 0;
+}
+
+.livechat h4 {
+  margin: 0;
+}
+
+.livechat .content {
+  padding: 1em;
+}
+
+.livechat .chat {
+  padding-bottom: 3em;
+}
+
+.livechat .content-wrapper {
+  height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+
+.livechat .message {
+  line-height: 1.3;
+}
+
+.livechat .message p.name {
+  margin-bottom: .5em;
+}
+
+.livechat .message p.msg {
+  margin-bottom: 1em;
+  font-size: 15px;
+}
+
+.livechat .message p.name {
+  font-weight: bold;
+}
+
+.livechat .user {
+  text-align: right;
+}
+
+.livechat .operator .name {
+  color: #9446F7;
+}
+
+.livechat .message {
+  background: #fafafa;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: .5em;
+}
+
+.send-container {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  background: white;
+  -webkit-box-shadow: -4px -8px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: -4px -8px 8px rgba(0, 0, 0, 0.05);
+  width: -webkit-fill-available;
+  border-radius: 0 0 1em 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% auto;
+      grid-template-columns: 70% auto;
+  -webkit-transform: all 3000ms ease-in-out;
+          transform: all 3000ms ease-in-out;
+}
+
+.send-container input[type="text"] {
+  padding: 1em;
+  border: 1px solid gray;
+  border-right: none;
+  border-radius: .7em 0 0 .7em;
+}
+
+.send-container input[type="submit"] {
+  padding: 1em;
+  background: #9446F7;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 0 .7em .7em 0;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.send-container input[type="submit"]:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+
+svg.bubble {
+  position: absolute;
+  width: 4em;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+svg.bubble :hover {
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
+}
+
+svg.exit {
+  width: 1.5em;
+  cursor: pointer;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+svg.exit :hover {
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  max-height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a45fff;
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.animate-chat {
+  -webkit-animation: grow-circle .4s forwards ease-out;
+          animation: grow-circle .4s forwards ease-out;
+}
+
+.animate-chat-reverse {
+  -webkit-animation: shrink-circle .4s forwards ease-out;
+          animation: shrink-circle .4s forwards ease-out;
+}
+
+@-webkit-keyframes grow-circle {
+  from {
+    -webkit-clip-path: circle(0% at 100% 100%);
+            clip-path: circle(0% at 100% 100%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes grow-circle {
+  from {
+    -webkit-clip-path: circle(0% at 100% 100%);
+            clip-path: circle(0% at 100% 100%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@-webkit-keyframes shrink-circle {
+  from {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+  to {
+    -webkit-clip-path: circle(0% at 100% 100%);
+            clip-path: circle(0% at 100% 100%);
+  }
+}
+
+@keyframes shrink-circle {
+  from {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+  to {
+    -webkit-clip-path: circle(0% at 100% 100%);
+            clip-path: circle(0% at 100% 100%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
